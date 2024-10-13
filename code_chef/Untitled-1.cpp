@@ -14,7 +14,10 @@ int main() {
 
         vector<int> nums(n);
         for (int i = 0; i < n; ++i) {
-            cin >> nums[i];
+            if (!(cin >> nums[i])) {
+                cerr << "Invalid input" << endl;
+                return 1;
+            }
         }
 
         unordered_map<int, int> count;

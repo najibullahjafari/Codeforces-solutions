@@ -1,14 +1,16 @@
 for _ in range(int(input())):
     n = int(input())
-    a = list(map(int, input().split()))
-
+    a = sorted(list(map(int, input().split())))
     i = 0
     j = 1
-    evens = sorted([x for x in a if x % 2 == 0])
-    odds = [x for x in a if x % 2 != 0]
-    my_new_list = odds + evens
-    evens.append(odds[0])
-    while len(my_new_list) > 1:
-        current = (my_new_list[i] + my_new_list[j])//2
-        my_new_list = my_new_list[j+1:] + [current]
-    print(my_new_list[0], my_new_list)
+    odd = [x for x in a if x % 2 != 0]
+    even = [x for x in a if x % 2 == 0]
+    new = odd + even
+
+    while len(new) > 1:
+        current = new[i]+new[j]
+        current = current // 2
+        new = new[j:] + [current]
+        print(new)
+        new = sorted(a)
+    print(a[0])

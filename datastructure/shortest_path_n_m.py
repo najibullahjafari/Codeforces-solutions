@@ -74,5 +74,3 @@ if __name__ == '__main__':
             ['d', '*', '*', '*']]
 
     print(minDistance(grid))
-
-    # This code is contributed by sajalmittaldei.

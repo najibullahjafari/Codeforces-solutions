@@ -27,7 +27,7 @@ for _ in range(int(input())):
             Dx, Dy = 0, Y
         else:
             Cx, Cy = 0, 0
-            Dx, Dy = 0, K
+            Dx, Dy = 0, 0
 
     print(Ax, Ay, Bx, By)
     print(Cx, Cy, Dx, Dy)
